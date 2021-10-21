@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    background-color: #727781;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav .container ul {
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    display: flex;
+    list-style: none;
+}
+
+.nav .container ul li a {
+    color: #666;
+    font-weight: bold;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.nav .container ul li a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+
+/* start head*/
+
+.header {
+    background-image: url(images/images\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.header .overlay {
+    background: rgba(49, 55, 61, .2);
+}
+
+.header .container {
+    padding: 80px 0;
+}
+
+.header .container h1 {
+    font-size: 40px;
+    color: #FFF;
+    margin: 28px 0 10px;
+}
+
+.header .container p {
+    color: #EEE;
+    margin-bottom: 28px;
+}
+
+.header .container button {
+    width: 25%;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #656574;
+    border: solid 1px #73737c;
+    font-size: 18px;
+    color: #FFF;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.header .container button:hover {
+    background-color: transparent;
+}
+
+
+/*features*/
+
+.features .container {
+    background-color: #656574;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 28px 0;
+}
+
+.features .container div {
+    width: 30%;
+    height: 200px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.features .container .features-one {
+    background-image: url(images/images\ \(2\).jpg);
+}
+
+.features .container .features-two {
+    background-image: url(images/images\ \(3\).jpg);
+}
+
+.features .container .features-three {
+    background-image: url(images/download\ \(3\).jpg);
+}
+
+.products .container {
+    background-color: #656574;
+    padding: 25px 0;
+}
+
+.products .container h2 {
+    color: #666;
+    font-size: 48px;
+}
+
+.products .container .pro-padding {
+    padding: 40px 0;
+}
+
+.products .container .product-one {
+    width: 50%;
+    height: 555px;
+    margin: auto;
+    background-image: url(images/how-to-get-your-trips-sponsored.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.models {
+    background-color: #656574;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #300ade;
+    padding: 1.5rem 0;
+}
+
+.models .model-one {
+    flex: 0 1 25rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #555;
+    padding: .8rem;
+    background-color: #1f1f3d;
+}
+
+.models .model-one img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid blue;
+}
+
+.models .model-one h2 {
+    margin-bottom: .5rem;
+    color: #300ade;
+    font-size: 1.5rem;
+}
+
+.models .model-one p {
+    color: #366aad;
+    font-size: 1.2rem;
+    text-align: center;
+}

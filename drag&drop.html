@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>drag and drop</title>
+    <style>
+        img {
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+            border-radius: 15%;
+        }
+        
+        div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        section {
+            height: 370px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        
+        #right {
+            border-radius: 20%;
+            margin: 6px;
+            width: 500px;
+            background-color: rgb(150, 42, 78);
+            box-shadow: rgb(88, 102, 110) -5px -5px 5px inset, rgb(88, 102, 110)5px 5px 5px inset;
+        }
+        
+        #left {
+            border-radius: 20%;
+            margin: 10px;
+            width: 450px;
+            background-color: rgb(150, 42, 78);
+            box-shadow: rgb(88, 102, 110) -5px -5px 5px inset, rgb(88, 102, 110) 5px 5px 5px inset;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+
+            // images => register events
+            var allimages = document.images;
+            for (var i = 0; i < allimages.length; i++) {
+                allimages[i].addEventListener('dragstart', startdrag);
+                allimages[i].addEventListener('dragend', enddrag);
+            }
+            // left => register events
+            left = document.getElementById('left');
+            left.addEventListener('dragover', overdrag);
+            left.addEventListener('dragenter', enterdrag);
+            left.addEventListener('drop', dropped);
+            // right=>register events
+            right = document.getElementById('right');
+            right.addEventListener('dragleave', leavedrag);
+
+        });
+
+        function startdrag(x) {
+
+            x.dataTransfer.setData('myimg', x.target.outerHTML);
+
+        }
+
+        function enddrag(x) {
+            x.target.style.display = 'none';
+            x.preventDefault();
+        }
+
+        function dropped(x) {
+            x.preventDefault();
+            left.innerHTML += x.dataTransfer.getData('myimg');
+        }
+
+        function overdrag(x) {
+            x.preventDefault();
+        }
+
+        function leavedrag(x) {
+            x.preventDefault();
+        }
+
+        function enterdrag(x) {
+            left.style.backgroundColor = 'gray';
+            x.preventDefault();
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="parent">
+        <section id="left"></section>
+        <section id="right">
+            <img src="images/download (2).jpg">
+            <img src="images/download (3).jpg">
+            <img src="images/images (1).jpg">
+            <img src="images/images (2).jpg">
+            <img src="images/images (3).jpg">
+            <img src="images/images (4).jpg">
+            <img src="images/images (5).jpg">
+            <img src="images/images (6).jpg">
+            <img src="images/images.jpg">
+            <img src="images/photo-1526772662000-3f88f10405ff.jpg">
+            <img src="images/81d4cafb73c8ab4d8bf6986c8a4accec.jpg">
+            <img src="images/how-to-get-your-trips-sponsored.jpg">
+
+
+
+
+
+
+
+        </section>
+    </div>
+</body>
+
+</html>

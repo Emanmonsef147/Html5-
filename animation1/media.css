@@ -1,0 +1,22 @@
+    @media (orientation: portrait) {
+        .mainwrapper .imges img {
+            transform: rotate(30deg);
+            margin-bottom: 20px;
+        }
+        .mainwrapper .imges img :hover {
+            transform: rotate(0);
+        }
+        .mainwrapper .imges img:active {
+            border: 5px dotted #00f;
+            box-shadow: 5px 5px 10px #0f0, -5px -5px 10px #0f0;
+        }
+        .mainwrapper :hover {
+            transform: none;
+        }
+        .mainwrapper:active {
+            transform: none;
+        }
+        .mainwrapper .words {
+            column-count: 2;
+        }
+    }
